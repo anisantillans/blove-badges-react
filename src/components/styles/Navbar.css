@@ -1,0 +1,23 @@
+.Navbar {
+  width: 100%;
+  padding: 0.5rem 0;
+  background: white;
+}
+
+.Narvar__brand {
+  color: #ff3737;
+  display: flex;
+  align-items: center;
+}
+.Narvar__brand > span {
+  font-size: 24px;
+}
+
+.Narvar__brand:hover {
+  color: #ff3737;
+  text-decoration: none;
+}
+
+.Narvar__logo-blove {
+  width: 80px;
+}

@@ -1,0 +1,44 @@
+.Badges__container-badge {
+  margin: 12px 0px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+}
+
+.Badge__container-img > img {
+  border-radius: 50%;
+  margin: 3px 30px 3px 2px;
+}
+
+.Badge__container-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.Badge__container-info > p {
+  margin-bottom: 4px;
+}
+
+.Badge-names {
+  font-weight: bold;
+}
+
+.Badge-social {
+  display: flex;
+  flex-direction: row;
+  color: #2aa9e0;
+}
+
+.Badge-social > p {
+  margin-bottom: 4px;
+}
+
+.Social-twitter {
+  height: 18px;
+  margin-top: 4px;
+  margin-right: 4px;
+}
