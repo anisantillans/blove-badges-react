@@ -1,8 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./styles/BadgesList.css";
 
 class BadgesList extends React.Component {
   render() {
+    if (this.props.badges.length === 0) {
+      return (
+        <div>
+          <h3>No donor were found</h3>
+          <Link className="btn btn-primary" to="/badges/new">
+            Create a donor account
+          </Link>
+        </div>
+      );
+    }
     return (
       <div className="Badges__container">
         {this.props.badges.map((badge) => {

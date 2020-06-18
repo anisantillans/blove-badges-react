@@ -1,10 +1,11 @@
-const fs = require('fs');
-const path = require('path');
-const faker = require('faker');
-const md5 = require('md5');
+const fs = require("fs");
+const path = require("path");
+const faker = require("faker");
+const md5 = require("md5");
 
 function createBadges(limit = 50) {
   const result = [];
+  const blood = ["O+", "O-", "A+", "A-", "B+", "B+", "AB+", "AB-"];
 
   for (let i = 0; i < limit; i++) {
     const firstName = faker.name.firstName();
@@ -16,7 +17,7 @@ function createBadges(limit = 50) {
       firstName,
       lastName,
       email,
-      jobTitle: faker.name.jobTitle(),
+      bloodType: faker.random.arrayElement(blood),
       twitter: `${firstName}${lastName}${faker.address.zipCode()}`,
       avatarUrl: `https://www.gravatar.com/avatar/${md5(email)}?d=identicon`,
     });
@@ -31,7 +32,7 @@ function main() {
   };
 
   fs.writeFileSync(
-    path.resolve(__dirname, 'db.json'),
+    path.resolve(__dirname, "db.json"),
     JSON.stringify(data, null, 4)
   );
 }
