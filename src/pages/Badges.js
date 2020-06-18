@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
 import "./styles/Badges.css";
 import BadgesList from "../components/BadgesList";
 
@@ -40,8 +40,7 @@ class Badge extends React.Component {
   };
   render() {
     return (
-      <div>
-        <Navbar />
+      <React.Fragment>
         <div className="Badges">
           <div className="Badges__hero">
             <div className="Badges__container">
@@ -55,15 +54,15 @@ class Badge extends React.Component {
         </div>
         <div className="Badges__container">
           <div className="Badges__buttons">
-            <a href="/badges/new" className="btn btn-primary">
+            <Link to="/badges/new" className="btn btn-primary">
               New Donor
-            </a>
+            </Link>
           </div>
           <div className="Badges__list">
             <BadgesList badges={this.state.data} />
           </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }

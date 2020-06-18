@@ -1,0 +1,11 @@
+.Notfound__container {
+  height: calc(100% - 86px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Notfound__container > img {
+  height: 600px;
+  object-fit: cover;
+}
