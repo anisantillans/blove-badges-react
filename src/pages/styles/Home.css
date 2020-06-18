@@ -1,0 +1,26 @@
+.Home {
+  width: 100%;
+  min-height: calc(100vh - 86px);
+  background: url("../../images/stars.svg"), #f4c4c7;
+  background-repeat: repeat;
+  color: #cc2c22;
+  display: flex;
+  align-items: center;
+}
+
+.Home__col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Home__col > h2,
+.Home__col > a {
+  margin: 13px;
+}
+
+@media screen and (min-width: 768px) {
+  .Home__col {
+    align-items: center;
+  }
+}
