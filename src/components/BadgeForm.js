@@ -11,20 +11,12 @@ class BadgeForm extends React.Component {
   handleClick = (e) => {
     console.log("button is clicked");
   };
-  //esto es enlazar eventos (onclick), lo que está haciendo el usuario con
-  //los componentes de react
-  handleSubmit = (e) => {
-    //el dedault es enviar el formulario pero no queremos eso
-    e.preventDefault();
-    console.log("se esta submit");
-    console.log(this.state);
-  };
 
   render() {
     return (
       <div>
         <h1>New Donor</h1>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.props.onSubmit}>
           <div className="form-group">
             <label>First Name</label>
             <input
