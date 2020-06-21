@@ -2,6 +2,7 @@ import React from "react";
 import BadgeForm from "../components/BadgeForm";
 import Badge from "../components/Badge";
 import api from "../api";
+
 import "./styles/BadgeNew.css";
 
 class BadgeNew extends React.Component {
@@ -12,13 +13,20 @@ class BadgeNew extends React.Component {
       email: "",
       bloodType: "",
       twitter: "",
+      avatarUrl: "",
     },
   };
+
+  gravatarUrl = (text) => {
+    return `https://www.gravatar.com/avatar/${text}?d=identicon`;
+  };
+
   handleChange = (e) => {
     this.setState({
       form: {
         ...this.state.form,
         [e.target.name]: e.target.value,
+        ["avatarUrl"]: this.gravatarUrl(this.state.form.email),
       },
     });
   };
@@ -26,7 +34,6 @@ class BadgeNew extends React.Component {
   handleSubmit = async (e) => {
     e.preventDefault();
     this.setState({ loading: true, error: null });
-
     try {
       await api.badges.create(this.state.form);
       this.setState({ loading: false });
@@ -58,7 +65,7 @@ class BadgeNew extends React.Component {
               <Badge
                 firstName={this.state.form.firstName || "FIRST_NAME"}
                 lastName={this.state.form.lastName || "LAST_NAME"}
-                avatarUrl="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                avatarUrl=""
                 bloodType={this.state.form.bloodType || "BLOOD_TYPE"}
                 email={this.state.form.email || "EMAIL"}
                 twitter={this.state.form.twitter || "TWITTER"}

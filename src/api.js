@@ -18,7 +18,7 @@ async function callApi(endpoint, options = {}) {
   const response = await fetch(url, options);
   const data = await response.json();
 
-  return data;
+  return data.reverse();
 }
 
 const api = {

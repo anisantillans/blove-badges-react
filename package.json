@@ -2,6 +2,7 @@
   "name": "blove-badges",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://blove-web.s3.amazonaws.com/",
   "scripts": {
     "start": "npm-run-all -p client server",
     "client": "react-scripts start",

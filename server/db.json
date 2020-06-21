@@ -156,18 +156,11 @@
     {
       "firstName": "Ana",
       "lastName": "Santillan",
-      "email": "ana@gmail.com",
+      "email": "asantillans@gmail.com",
       "bloodType": "A+",
-      "twitter": "asd",
-      "id": "4zzBsUk"
-    },
-    {
-      "firstName": "Ana",
-      "lastName": "Santillan",
-      "email": "ana@gmail.com",
-      "bloodType": "A+",
-      "twitter": "asd",
-      "id": "C7YHHKl"
+      "twitter": "anisanti",
+      "avatarUrl": "https://www.gravatar.com/avatar/3979576bcdcbd166d005a5b225e1bc52?d=identicon",
+      "id": "Y5Z166g"
     }
   ]
 }
