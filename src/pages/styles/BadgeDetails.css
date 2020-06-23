@@ -1,0 +1,31 @@
+.BadgeDetails__hero {
+  height: 400px;
+  width: 100%;
+  padding: 2rem 0;
+  background-color: #f4c4c7;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.Badges_hero-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.BadgeDetails__hero-attendant-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.badge-cont {
+  margin-bottom: 3rem;
+}
+
+.BadgeDetails__buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
